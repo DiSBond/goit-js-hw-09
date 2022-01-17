@@ -57,11 +57,9 @@ function onStartBtnClick() {
          hours.textContent = addLeadingZero(result.hours);
          minutes.textContent = addLeadingZero(result.minutes);
          seconds.textContent = addLeadingZero(result.seconds);
-         
-        
-
     }, 1000);
-   
+  startBtn.disabled = true;
+  timerInput.disabled = true;
 }
 
 function addLeadingZero(e) {

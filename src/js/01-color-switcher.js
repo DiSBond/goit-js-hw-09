@@ -19,20 +19,19 @@ refs.startBtn.addEventListener('click', startBtnClick)
 refs.stopBtn.addEventListener('click', stopBtnClick)
 
 function startBtnClick() {
-  if (counter <= 1) {
+  refs.startBtn.disabled = true;
     refs.body.style.backgroundColor = randomColor();
   timer = setInterval(() => {
     refs.body.style.backgroundColor = randomColor();
   }, TIME);
-    counter += 1;
-    return console.log("started changing color");
-  }
-return console.log("second");
+
+  
+
 }
 
 function stopBtnClick() {
   clearInterval(timer)
-  counter = 0;
+  refs.startBtn.disabled = false;
 }
 
 refs.startBtn.style.width = "300px";

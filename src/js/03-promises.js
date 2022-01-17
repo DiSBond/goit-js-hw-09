@@ -1,4 +1,4 @@
-
+import Notiflix from 'notiflix';
 //refs
 const notification = document.querySelector(".js-alert");
 
@@ -36,10 +36,10 @@ function onClickBtn(e) {
 
     createPromise(position, numberDelay)
   .then(({ position, numberDelay }) => {
-    console.log(`✅ Fulfilled promise ${position} in ${numberDelay}ms`);
+    Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${numberDelay}ms`);
   })
   .catch(({ position, numberDelay }) => {
-    console.log(`❌ Rejected promise ${position} in ${numberDelay}ms`);
+    Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${numberDelay}ms`);
   });
  
   }, numberStep);
